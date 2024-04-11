@@ -1,0 +1,8 @@
+Entregar por email a danielsanchez68@hotmail.com en alguna de las siguientes formas:
+
+- adjuntando el zip del ejercicio en el mail a enviar (verificar que no rebote por seguridad)
+- enviando el link a un drive personal con permisos donde esté el zip subido
+- enviando el link a un repositorio personal de Github donde el ejercicio subido
+
+La fecha de entrega es el 17/4/2024
+
