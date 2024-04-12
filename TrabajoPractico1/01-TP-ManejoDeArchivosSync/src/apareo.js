@@ -5,6 +5,9 @@
  * @returns {number[]} un nuevo array de números ordenados
  */
 function combinarDosArrays(arrA, arrB) {
+    let nuevoArray = [... new Set(arrA.concat(arrB).sort((a, b) =>a - b))];
+    // *****los corchetes [...new Set] hacen transforman el set en array¿? *****
+    return nuevoArray
 }
 
 /**
@@ -13,6 +16,11 @@ function combinarDosArrays(arrA, arrB) {
  * @returns {nuber[]} el nuevo array de números ordenados
  */
 function combinarNArrays(arrs) {
+    let nuevoArray = arrs.flat();
+    nuevoArray = [...new Set(nuevoArray)].sort((a,b) => a - b)
+    // *****los corchetes [...new Set] hacen transforman el set en array¿? *****
+
+    return nuevoArray;
 }
 
 // exportar ambas funciones
