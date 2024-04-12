@@ -6,6 +6,10 @@
  * @returns {number[]} array de numeros
  */
 function transformarStringEnArrayDeNumeros(str, separador) {
+
+    let nuevoArray = str.split(separador);
+    return nuevoArray;
+
 }
 
 /**
@@ -15,6 +19,12 @@ function transformarStringEnArrayDeNumeros(str, separador) {
  * @returns {string} el nuevo string
  */
 function transformarArrayDeNumerosAUnSoloString(arr, separador) {
+    let nuevoString = "";
+    for(let i = 0; i < arr.length; i ++){
+        nuevoString.concat(arr[i]).concat(separador);
+    }
+
+    return nuevoString;
 }
 
 // exportar ambas funciones
