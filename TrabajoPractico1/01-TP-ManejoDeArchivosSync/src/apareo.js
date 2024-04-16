@@ -24,3 +24,8 @@ function combinarNArrays(arrs) {
 }
 
 // exportar ambas funciones
+
+module.exports = {
+    combinarDosArrays : combinarDosArrays(),
+    combinarNArrays : combinarNArrays()
+}
