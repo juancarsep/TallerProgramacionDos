@@ -55,3 +55,11 @@ function escribirArchivo(archivoAEscribir, textoAEscribir){
         })
     })
 }
+
+
+module.exports = {
+    'contenidoStr' : contenidoStr(),
+    'contenidoObj' : contenidoObj(),
+    'sizeArchivo' : sizeArchivo(),
+    'escribirArchivo': escribirArchivo()
+}

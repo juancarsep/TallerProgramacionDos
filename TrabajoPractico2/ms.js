@@ -26,7 +26,7 @@ try {
 
     console.log(info);
 
-    fs.writeFileSync('package.json', info);
+    fs.writeFileSync('ms.txt', info);
 
 } catch (error) {
     console.log('Nada funcionó, hubo un error');
