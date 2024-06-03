@@ -3,10 +3,11 @@ const controlador = require('../controller/libros');
 
 const router = express.Router();
 
-router.get('/libros/:id?', controlador.obtenerLibros);
-router.post('/libros', controlador.guardarLibro);
-router.put('/libros/:id', controlador.actualizarLibro);
-router.get('/libros/:id', controlador.borrarLibro);
+router.get('/', controlador.obtenerLibros);
+router.get('/:id?', controlador.obtenerLibro);
+router.post('/', controlador.guardarLibro);
+router.put('/:id', controlador.actualizarLibro);
+router.get('/:id', controlador.borrarLibro);
 
 
 

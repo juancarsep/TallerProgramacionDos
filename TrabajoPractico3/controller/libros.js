@@ -1,10 +1,15 @@
 const servicio = require('../service/libros.js');
 
 const obtenerLibros = (req, res) => {
-    let libros;
-    const { id } = req.params;
-    libros = servicio.obtenerLibros(id);
+
+    const libros = servicio.obtenerLibros(id);
     res.json(libros);
+}
+
+const obtenerLibro = (req, res) => {
+    const {id} = req.params;
+    const libro = servicio.obtenerLibro(id);
+    res.json(libro);
 }
 
 const guardarLibro = (req, res) => {
@@ -22,12 +27,13 @@ const actualizarLibro = (req, res) => {
 
 const borrarLibro = (req, res) => {
     const { id } = req.params;
-    const libroEliminado = servicio.borrarLibro(id);
-    res.json(libroEliminado);
+    const libro = req.body;
+    const libroEliminado = servicio.borrarLibro(id, libro);
 }
 
 module.exports = {
     obtenerLibros,
+    obtenerLibro,
     guardarLibro,
     actualizarLibro,
     borrarLibro

@@ -25,32 +25,49 @@ const libros = [
     },
 ]
 
-const obtenerLibro = id => {
-    if (id) {
-        const libro = libros.find(libro => libro.id = id);
+const obtenerLibros = () => libros;
+
+const obtenerLibro = id =>{
+    if(id){
+        const libro = libros.find(libro => libro.id == id);
         return libro || {};
-    } else {
-        return libros
     }
 }
+
 
 const guardarLibro = libro => {
     libros.push(libro)
     return libro;
 }
 
-const actualizarLibro = (id, libro) =>{
+const actualizarLibro = (id, libro) => {
 
     const index = libros.findIndex(libro => libro.id === id);
 
-    if(index != -1){
+    if (index != -1) {
 
         const libroAnt = libros[index];
-        const libroAct = {... libroAnt, ... libro};
+        const libroAct = { ...libroAnt, ...libro };
         libros.splice(index, 1, libroAct);
         return libroAct;
 
-    }else{
+    } else {
         return {};
     }
+}
+
+const eliminarLibro = (id, libro) => {
+    const index = libros.findIndex(libro => libro.id === id);
+    if (index != -1) {
+        libros.splice(index, 1, libro);
+    }
+}
+
+
+module.exports = {
+    obtenerLibro,
+    obtenerLibros,
+    guardarLibro,
+    actualizarLibro,
+    eliminarLibro
 }
